@@ -1,0 +1,47 @@
+<?php
+print 'asdasd \''
+?> 
+单引号只会转换引号和斜杠本身
+双引号除了不能识别单引号其他都能识别
+strops（）如果找到了就返回子串的起始位置如果没找到就返回false
+<?php
+$substring=substr("sadaasd",2,3);
+var_dump($substring);
+echo($substring);
+?>
+echo直接输出变量值
+var_dump会返回变量的类型长度及内容
+substr省略length直接读到结尾
+<?php
+$newstring=substr_replace("asdadasd","2ec4g5yh63",4,5);
+echo($newstring);
+?>
+substr_replace(老的字符串,要替换的字符串,起始位置,替换指定长度的字符)
+strstr('aeiouAEIOU',$string1[$i]) 在string1字符串中寻找在引号下的的内容如果有返回1
+php .连接两个字符串
+<?php
+function lookandsay($s){
+    $r='';
+    $m=$s[0];
+    $n=1;
+    for($i=1,$j=strlen($s);$i<$j;$i++){
+        if($s[$i]==$m){
+            $n++;
+        }else{
+            $r .=$n.$m;
+            $m=$s[$i];
+            $n=1;
+        }
+    }
+    return $r.$n.$m;
+}
+for($i=0,$s=1;$i<10;$i++){
+    $s=lookandsay($s);
+    print "$<br/>\n";
+}
+?>
+look and say函数
+php数组
+1.常规
+2.类似于python给键值
+
